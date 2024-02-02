@@ -94,7 +94,7 @@ const RenderStartsByProgress = (scene) => {
   let indexImage;
   if (scene.progressPercent <= 20) {
     indexImage = 0;
-  } else if (scene.progressPercent <= 40) {
+  } else if (scene.progressPercent <= 70) {
     indexImage = 1;
   } else if (scene.progressPercent <= 90) {
     indexImage = 2;

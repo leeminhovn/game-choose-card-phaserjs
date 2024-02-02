@@ -31,7 +31,9 @@ export default function PlayGameScreenHeader(sence) {
         .on("pointerdown", () => {
           popupExitGame(sence);
         });
-      const countDownTimeController = countDownTime(sence).setOrigin(0, 0);
+      const countDownTimeController = countDownTime(sence, () => {
+        sence.events.emit("end_game");
+      }).setOrigin(0, 0);
       wrap_leftSideContainer.add(countDownTimeController);
       wrap_leftSideContainer.add(iconBack);
 

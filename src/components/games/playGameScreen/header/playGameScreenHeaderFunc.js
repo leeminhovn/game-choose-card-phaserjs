@@ -78,7 +78,10 @@ export const countDownTime = (scene, handleDoneTimeCount = () => {}) => {
   }
   scene.updateTimer = () => {
     // Tăng thời gian đã trôi qua
-    if (scene.isPlaying === false) {
+    if (scene.isPlaying === false || scene.countTime === 0) {
+      if (scene.countTime === 0) {
+        handleDoneTimeCount();
+      }
       return;
     }
     scene.countTime--;
