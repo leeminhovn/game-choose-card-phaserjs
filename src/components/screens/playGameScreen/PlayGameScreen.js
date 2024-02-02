@@ -8,7 +8,6 @@ import {
 } from "@/untils/helpers/fileHelper";
 import {
   handleEndGame,
-  handleNextGame,
   handleReturnCountItemByIdx,
 } from "./playGameScreenFunc";
 import ListAnswerItem from "@/components/games/playGameScreen/listAnswerItem/ListAnswerItem";
@@ -72,7 +71,6 @@ export default function PlayGameScreen(props) {
         .setOrigin(0, 0);
       PlayGameScreenHeader(this);
       TitleWord(this);
-      this.handleNextGame = handleNextGame;
       const sence = this;
       this.events.on("change_game", (stauts) => {
         if (sence.wordsLearning.length === 0) {

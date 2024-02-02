@@ -1,7 +1,4 @@
-import {
-  handleCheckGame,
-  handleNextGame,
-} from "@/components/screens/playGameScreen/playGameScreenFunc";
+import { handleCheckGame } from "@/components/screens/playGameScreen/playGameScreenFunc";
 import { ImageName } from "@/untils/constant/games";
 import { shuffleArray } from "@/untils/helpers/fileHelper";
 
