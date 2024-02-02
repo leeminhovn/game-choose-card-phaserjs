@@ -100,7 +100,7 @@ export default function WelcomeScreen(props) {
                 })
                 .setInteractive()
                 .on("pointerdown", () => {
-                  window.location.href = `${process.env.NEXT_PUBLIC_ACCOUNT}?url-callback=${process.env.NEXT_PUBLIC_WEB_URL}`;
+                  window.location.href = `${process.env.NEXT_PUBLIC_ACCOUNT}?url-callback=${window.location.href}`;
                 });
               let textLogin = this.add
                 .text(0, 0, "Vui lòng đăng nhập trước khi bắt đầu vào học", {
